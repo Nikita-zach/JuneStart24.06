@@ -3,21 +3,33 @@ text=input("Enter string>>>")
 print(text.count("b"))
 
 #Task 2
+#name=input("Enter your name>>>")
+#res=""
+#x=1
+#for item in name:
+#    if not item.isupper() and item==name[0]:
+#        res+="First letter must be in upper case.\n"
+#    elif not item.islower() and item!=name[0] and x==1:
+#        res+="All letters except first must be in lower case\n"
+#        x+=1
+#    elif item.isdigit() and x==1 or x==2:
+#        res+="Digits are not allowed\n"
+#        x+=2
+#print(res)
+#if not len(res):
+#    print("Have a nice day")
+
 name=input("Enter your name>>>")
-res=""
-x=1
-for item in name:
-    if not item.isupper() and item==name[0]:
-        res+="First letter must be in upper case.\n"
-    elif not item.islower() and item!=name[0] and x==1:
-        res+="All letters except first must be in lower case\n"
-        x+=1
-    elif item.isdigit() and x==1 or x==2:
-        res+="Digits are not allowed\n"
-        x+=2
-print(res)
-if not len(res):
-    print("Have a nice day")
+x=[item for item in name]
+y=True
+for item in x:
+    if item.isdigit():
+        print("You've entered a digit, please try again.")
+        y=False
+if not name.istitle():
+    print("Please follow the rules of a title")
+elif name.istitle() and y==True:
+    print("Thank you, have a nice day")
 
 #Task 3
 kod=input("Enter string>>>")
