@@ -66,3 +66,20 @@ for i in range(1,len(rep_words) // 2 + 1):
         break
 
 print(f"Your word is - {word}")
+
+# Task 7
+
+x = "Да<div id=rcnt>, у меня есть 100 доларов </div id=rcnt>"
+for i in range(2):
+    ind1, ind2 = x.find("<"), x.find(">")
+    x = x[:ind1] + x[ind2 + 1:]
+print(x)
+
+# или
+
+x1 = "<div id=rcnt>Да, у меня есть 100 долларов</div id=rcnt>"
+
+ind3 = x.find(">")
+ind4 = x.find("</")
+x2 = x[ind3 + 1:ind4]
+print(x2)
