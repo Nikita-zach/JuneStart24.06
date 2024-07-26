@@ -74,6 +74,8 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+.JuneSudying/test.py
+.JuneSudying/lect.py
 
 # Editor-based Rest Client
 .idea/httpRequests
