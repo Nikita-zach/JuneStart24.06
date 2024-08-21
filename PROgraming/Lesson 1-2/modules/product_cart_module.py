@@ -67,6 +67,22 @@ class Cart(DiscountMixin, LoggingMixin):
         self.log(f"{self.total_cost()} were paid with {payment_method.__class__.__name__.replace('Processor', '')}")
         print(payment_method.pay(amount))
 
+    def __iadd__(self, another_cart):
+        if isinstance(another_cart, Cart):
+            for key, value in another_cart.products.items():
+                if key in self.products:
+                    self.products[key] += value
+                else:
+                    self.products[key] = value
+            return self
+        raise ValueError("You can combine cart only with another cart")
+
+    def __getitem__(self, index):
+        return self.products[index]
+
+    def __len__(self):
+        return len(self.products)
+
     def __str__(self):
         """
         Return a string representation of the cart contents.
