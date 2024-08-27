@@ -83,6 +83,18 @@ class Cart(DiscountMixin, LoggingMixin):
     def __len__(self):
         return len(self.products)
 
+    def __iter__(self):
+        self.index = 0
+        return self
+
+    def __next__(self):
+        if self.index >= len(self.products):
+            raise StopIteration
+
+        index_product = self.products[self.index]
+        self.index += 1
+        return index_product
+
     def __str__(self):
         """
         Return a string representation of the cart contents.

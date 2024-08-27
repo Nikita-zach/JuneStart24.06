@@ -38,7 +38,7 @@ for item in kod:
     kod_da.append(ord(item))
 print(sum(kod_da))
 
-or    #Я не понял условия таска:-(
+#or    #Я не понял условия таска:-(
 
 kod1=input("Enter string>>>")
 kod_da1=kod1.split()
