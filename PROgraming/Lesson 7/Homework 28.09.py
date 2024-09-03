@@ -56,7 +56,6 @@ def fibonacci_rec(n):
     else:
         return fibonacci_rec(n - 1) + fibonacci_rec(n - 2)
 
-
 x = fibonacci_iter()
 print(x(20))
 print(fibonacci_rec(20))
