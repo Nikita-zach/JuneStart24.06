@@ -17,8 +17,10 @@ else:
     print("Try Again :-(")
 
 #Task 3
-e_mail = "VasyaPupkin_20--02"
-mail_pattern = r"^[A-Za-z0-9](?:[A-Za-z0-9]|_(?!-)|-(?!-))+$"
+
+e_mail = "VasyaPupkin_2002@gmail.com"
+mail_pattern = r"^[A-Za-z0-9](?:[A-Za-z0-9._%+-]*)@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+
 result = re.match(mail_pattern, e_mail)
 if result:
     print("Good Job :-)")
@@ -26,8 +28,8 @@ else:
     print("Try Again :-(")
 
 
+
 #Task 4
-import re
 
 login = "Krutoj330"
 login_pattern = r"^[A-Za-z0-9]{2,10}$"
